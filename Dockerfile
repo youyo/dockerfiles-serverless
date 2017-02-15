@@ -3,4 +3,5 @@ MAINTAINER youyo
 
 ENV SERVERLESS_VERSION=1.7.0
 
-RUN npm install -g serverless@${SERVERLESS_VERSION}
+RUN apk add --no-cache --update ca-certificates openssl curl && \
+	npm install -g serverless@${SERVERLESS_VERSION}
