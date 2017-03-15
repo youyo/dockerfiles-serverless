@@ -1,7 +1,7 @@
-FROM node:7.5.0-alpine
+FROM node:7-alpine
 MAINTAINER youyo
 
-ENV SERVERLESS_VERSION=1.8.0
+ENV SERVERLESS_VERSION=1.9.0
 
 RUN apk add --no-cache --update ca-certificates openssl curl && \
 	npm install -g serverless@${SERVERLESS_VERSION}
